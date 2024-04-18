@@ -1,0 +1,8 @@
+use test_db_2;
+create table cab_fare(id int primary key,name varchar(20),kilometer double,total_fare double not null,discount double ,coupon_discount double,final_fare double);
+insert into cab_fare(id,name,kilometer,total_fare,discount,coupon_discount,final_fare)values(1,'Ani',12,1200,10,100,1090);
+insert into cab_fare(id,name,kilometer,total_fare,discount,coupon_discount,final_fare)values(2,'Jan',150,1500,20,50,1430);
+insert into cab_fare(id,name,kilometer,total_fare,discount,coupon_discount,final_fare)values(3,'Ram',20,1400,10,0,1390);
+insert into cab_fare(id,name,kilometer,total_fare,discount,coupon_discount,final_fare)values(4,'Valli',300,3000,100,100,2800);
+select * from cab_fare;
+select name from cab_fare where kilometer=20;
