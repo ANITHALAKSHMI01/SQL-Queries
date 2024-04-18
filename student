@@ -1,0 +1,10 @@
+use test_db_1;
+create table student(id int primary key,name varchar(30) not null);
+alter table student add address varchar(150);
+desc student;
+insert into student(id,name,address)values(1,'Janani','Tiruppur');
+insert into student(id,name,address)values(2,'Anitha','Tenkasi');
+insert into student(id,name,address)values(3,'Rani','Chennai');
+insert into student(id,name,address)values(4,'Vini','Madurai');
+insert into student(id,name,address)values(5,'Nikil','Trichy');
+select * from test_db_1.student;
