@@ -1,0 +1,18 @@
+use test_db_2;
+create table book(book_id int auto_increment primary key,book_name varchar(20) not null,price int not null,date_of_issue date not null,no_of_pages int);
+insert into book(book_id,book_name,price,date_of_issue,no_of_pages)values(1,'good vibes',200,'2001-09-12',102);
+insert into book(book_name,price,date_of_issue,no_of_pages)values('Little Princes',500,'1999-01-14',200);
+insert into book(book_name,price,date_of_issue,no_of_pages)values('Growth',1000,'2002-05-29',450);
+insert into book(book_name,price,date_of_issue,no_of_pages)values('Positive Thinking',72,'1983-09-30',45);
+insert into book(book_name,price,date_of_issue,no_of_pages)values('Our Life',80,'2000-12-12',50);
+SELECT * FROM test_db_2.book;
+update book set price=50 where book_id=4;
+alter table book add author_name varchar(20);
+update test_db_2.book set author_name='Amith' where no_of_pages=45 ;
+alter table test_db_2.book drop column author_name;
+delete from test_db_2.book where date_of_issue='2002-05-29';
+select book_name from test_db_2.book order by book_name desc;
+select * from test_db_2.book where date_of_issue between '1999-09-11' and '2002-12-31';
+select book_name from test_db_2.book where price>100;
+desc test_db_2.book;
+alter table test_db_2.book modify book_name varchar(20) not null;
