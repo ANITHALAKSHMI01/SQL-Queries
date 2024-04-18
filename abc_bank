@@ -1,0 +1,11 @@
+create database test_db_2;
+use test_db_2;
+create table abc_bank(name varchar(50),account_no int primary key,phone_no int not null,available_balance double not null);
+desc abc_bank;
+insert into abc_bank(name,account_no,phone_no,available_balance)values('Anitha',123456789,654210981,12000.50);
+insert into abc_bank(name,account_no,phone_no,available_balance)values('Jansi',789123456,681542109,545000.50);
+insert into abc_bank(name,account_no,phone_no,available_balance)values('Ramar',456789123,968154210,765000.50);
+insert into abc_bank(name,account_no,phone_no,available_balance)values('Vani',234567891,815496210,8900.24);
+insert into abc_bank(name,account_no,phone_no,available_balance)values('Nikil',327891456,915496210,95800.24);
+insert into abc_bank(name,account_no,phone_no,available_balance)values('Priya',783291645,911549620,389800.24);
+select * from abc_bank;
