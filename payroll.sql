@@ -5,4 +5,11 @@ insert into payroll(total_workingdays,no_ofdays_worked,no_of_leaves,gross_salary
 insert into payroll(total_workingdays,no_ofdays_worked,no_of_leaves,gross_salary,gross_deduction,net_pay)values(22,20,2,11000,1000,10000);
 insert into payroll(total_workingdays,no_ofdays_worked,no_of_leaves,gross_salary,gross_deduction,net_pay)values(22,17,3,11000,2500,8500);
 insert into payroll(total_workingdays,no_ofdays_worked,no_of_leaves,gross_salary,gross_deduction,net_pay)values(22,22,0,11000,0,11000);
-select * from payroll;
+select * from test_db_2.payroll;
+alter table test_db_2.payroll add overtime_worked int ;
+update test_db_2.payroll set overtime_worked=1  where employee_id=3554;
+update test_db_2.payroll set overtime_worked=5 where employee_id=3556;
+update test_db_2.payroll set overtime_worked=2 where employee_id=3553;
+update test_db_2.payroll  set net_pay=9400 where overtime_worked=2;
+update test_db_2.payroll  set net_pay=11200 where overtime_worked=1;
+update test_db_2.payroll  set net_pay=9500 where overtime_worked=5;
