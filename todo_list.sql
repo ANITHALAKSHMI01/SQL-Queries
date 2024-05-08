@@ -3,7 +3,7 @@ create table todo_list(s_no int primary key auto_increment,date date not null,ap
 select * from todo_list;
 desc todo_list;
 drop table todo_list;
-create table todo_register_login(s_no int primary key auto_increment,username varchar(30) unique,phone_no varchar(10) unique,email_id varchar(30) unique,password varchar(6) not null,role varchar(10) not null);
+create table todo_register_login(s_no int primary key auto_increment,username varchar(30) unique,doctor_name varchar(25) unique,phone_no varchar(10) unique,email_id varchar(30) unique,password varchar(6) not null,role varchar(10) not null);
 select * from todo_register_login;
 desc todo_register_login;
 drop table todo_register_login;
